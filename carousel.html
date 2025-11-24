@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAROUSEL</title>
+    <link rel="stylesheet" a href="style.css">
+</head>
+
+<body>
+
+    <div id="heading">
+        <h1>NATURE</h1>
+    </div>
+    <div id="section">
+        <div class="previous">
+
+            <button onclick="pre()" id="prev"> < </button>&nbsp;
+        </div>
+        <div id="image">
+            <img id="imgg" src=" " width="1200px" height="500px">&nbsp;
+        </div>
+        <div class="next">
+            <button onclick="next()" id="nxt">></button>
+        </div>
+    </div>
+    <script>
+        //single image display
+        /*  const img=document.getElementById("image");
+          img.innerHTML=' <img src="./assets/pexels-mastercowley-1128797.jpg" width="500px">';   */
+        //Array of images
+        /*   const img= ["./assets/pexels-mastercowley-1128797.jpg","./assets/pexels-irenelasus-88517.jpg", "./assets/pexels-pixabay-373394.jpg",
+           "./assets/pexels-pok-rie-33563-132037.jpg",
+           "./assets/pexels-rpnickson-2775196.jpg"];
+          document.getElementById("image").innerHTML=' <img src="./assets/pexels-mastercowley-1128797.jpg" width="200px"> <img src="./assets/pexels-irenelasus-88517.jpg" width="200px">"<img src="./assets/pexels-pixabay-373394.jpg" width=200px">,<img src="./assets/pexels-pok-rie-33563-132037.jpg" width="200px">,<img src= "./assets/pexels-rpnickson-2775196.jpg" width="200px">';
+              */
+        //carousel
+        const array = [
+            "./assets/pexels-mastercowley-1128797.jpg",
+            "./assets/pexels-irenelasus-88517.jpg",
+            "./assets/pexels-pixabay-373394.jpg",
+            "./assets/pexels-pok-rie-33563-132037.jpg",
+            "./assets/pexels-rpnickson-2775196.jpg"
+        ];
+        const image = document.getElementById("imgg");
+        console.log(image, "chaithanyaimag");
+        let i = 0;
+        image.src = array[i];
+        console.log(i);
+
+        function pre() {
+            i--;
+            if (i < 0) {
+                i = array.length - 1;
+
+            }
+            image.src = array[i];
+            console.log("previous button clicked");
+
+        }
+        console.log(array.length, "arraylength");
+        function next() {
+            i++;
+            if (i >= array.length) {
+                i = 0;
+            }
+            image.src = array[i];
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        #first {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            height: 100px;
+
+        }
+    </style>
+</head>
+<body><div id="first">
+        <div class="previous">
+            <button onclick="pre()" id="pre">Previous</button>
+        </div>
+        <div id="image">
+
+        </div>
+        <div class="next">
+            <button onclick="next()" id="nxt">Next</button>
+        </div>
+    </div>
+    <script>
+        id1=" <img src="./assets/pexels-mastercowley-1128797.jpg" width="200px"> ";
+         const imgs = ["./assets/pexels-mastercowley-1128797.jpg", "./assets/pexels-irenelasus-88517.jpg", "./assets/pexels-pixabay-373394.jpg",
+            "./assets/pexels-pok-rie-33563-132037.jpg",
+            "./assets/pexels-rpnickson-2775196.jpg"];
+             document.getElementById("image").innerHTML=' <img src="./assets/pexels-mastercowley-1128797.jpg" width="200px"> <img src="./assets/pexels-irenelasus-88517.jpg" width="200px">"<img src="./assets/pexels-pixabay-373394.jpg" width=200px">,<img src="./assets/pexels-pok-rie-33563-132037.jpg" width="200px">,<img src= "./assets/pexels-rpnickson-2775196.jpg" width="200px">';
+    </script>
+</body>
+</html>
