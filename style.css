@@ -8,7 +8,6 @@ body {
     align-items: center;
     flex-direction: row;
     height: 100px;
-
 }
 #section{
     display: flex;
@@ -16,7 +15,6 @@ body {
 }
 .previous{
     margin-top: 19%;
-
 }
 .next{
     margin-top: 19%;
